@@ -1,0 +1,129 @@
+/*
+#1 color = rgb(185, 0, 10);
+#2 color = #e9372e;
+*/
+
+a:hover,
+a:focus {
+    color:#e0d6c7;
+}
+.header-social ul li a{
+    color:rgb(185, 0, 10);
+}
+.header-social ul li a:hover,a:focus{
+    color:#e0d6c7;
+}
+.circled {
+	background: rgb(185, 0, 10);
+}
+
+.con1 > div, .con2 > div, .con3 > div { 
+	background-color: rgb(185, 0, 10);
+}
+
+.scrollup:hover {
+	background: rgb(185, 0, 10);
+}
+
+
+/* service */
+
+.service-icon span {
+	color: rgb(185, 0, 10);
+}
+
+
+
+/* button */
+.btn-skin {
+  background-color: rgb(185, 0, 10);
+  border-color: rgb(185, 0, 10);
+}
+
+
+/* top */
+.top-area {
+	/*background: rgb(185, 0, 10);*/
+}
+
+/* menu */
+
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+	color: #e9372e;
+}
+.navbar-custom.top-nav-collapse .nav li a:hover,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active a,.navbar-custom.top-nav-collapse .nav li.active a  {
+    color: #e9372e;
+}
+
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+    background-color: rgb(185, 0, 10);
+}
+
+
+.bg-skin {
+	background: rgb(185, 0, 10);
+}
+
+.highlight-color {
+	background-color: rgb(185, 0, 10);
+}
+.color {
+	color: rgb(185, 0, 10);
+}
+
+/* pricing box  */
+.pricing-content.featured h2,.pricing-content.featured .price-bottom {
+	background-color:#e9372e;
+}
+.pricing-content.featured h3 {
+	background:rgb(185, 0, 10);
+}
+
+
+
+/* team */
+.cbp-l-grid-team-name {
+    color: #e9372e;
+}
+
+.cbp-l-filters-button .cbp-filter-counter {
+	background-color: rgb(185, 0, 10);
+}
+
+.cbp-l-filters-alignLeft .cbp-filter-item-active {
+    /* @editable properties */
+    background-color: rgb(185, 0, 10);
+    border:1px solid rgb(185, 0, 10);
+}
+
+.cbp-l-filters-dropdownWrap {
+    /* @editable properties */
+    width: 200px;
+    position: absolute;
+    right: 0;
+    background: rgb(185, 0, 10);
+}
+.cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
+    /* @editable properties */
+    background-color: rgb(185, 0, 10);
+    border-color: rgb(185, 0, 10);
+}
+.cbp-l-caption-buttonLeft,
+.cbp-l-caption-buttonRight {
+    /* @editable properties */
+    background-color: rgb(185, 0, 10);
+}
+
+.cbp-l-caption-buttonLeft:hover,
+.cbp-l-caption-buttonRight:hover {
+    /* @editable properties */
+    background-color: #e9372e;
+}
+
+.form-control:focus {
+  border-color: #e9372e;
+}

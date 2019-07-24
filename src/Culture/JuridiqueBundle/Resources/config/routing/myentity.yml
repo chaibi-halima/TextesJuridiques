@@ -1,0 +1,24 @@
+myentity_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:MyEntity:index" }
+    methods:  GET
+
+myentity_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:MyEntity:show" }
+    methods:  GET
+
+myentity_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:MyEntity:new" }
+    methods:  [GET, POST]
+
+myentity_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:MyEntity:editTeam" }
+    methods:  [GET, POST]
+
+myentity_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:MyEntity:delete" }
+    methods:  DELETE

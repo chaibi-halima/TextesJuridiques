@@ -1,0 +1,27 @@
+{# src/Culture/JuridiqueBundle/Resources/views/form.html.twig #}
+
+
+<div class="well research_form">
+
+    <h3>Formulaire de recherche des Textes</h3>
+
+    <form action="" method="post" {{form_enctype(form) }}>
+
+        <div id="searchadvertisment_form">
+
+            {{ form_row(form.typetexte) }}
+            {{ form_row(form.annee) }} 
+            {{ form_row(form.numero) }}
+            {{ form_row(form.date) }}
+            {{ form_row(form.domaine) }}
+            {{ form_row(form.anneejort) }} 
+            {{ form_row(form.jort) }}
+            {{ form_row(form.datejort) }}
+        
+        </div>
+
+        <input class="btn btn-primary" type="submit" />
+
+    </form>
+
+</div>

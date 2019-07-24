@@ -1,0 +1,134 @@
+<?php
+
+namespace Culture\JuridiqueBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+
+/**
+ * TypeTexte
+ *
+ * @ORM\Table(name="type_texte")
+ * @ORM\Entity(repositoryClass="Culture\JuridiqueBundle\Repository\TypeTexteRepository")
+ */
+class TypeTexte
+{
+    /**
+    * @ORM\OneToMany(targetEntity="Culture\JuridiqueBundle\Entity\TexteJuridique",mappedBy="typetexte")
+    */
+    private $textesjuridiques;
+    
+    /**
+    * @var
+    *
+    * @ORM\OneToMany(targetEntity="Culture\JuridiqueBundle\Entity\TypeTexteTranslation", mappedBy="type_texte", cascade="persist", indexBy="locale", fetch="EAGER")
+    * @ORM\JoinColumn(nullable=true, onDelete="cascade")
+    */
+    private $type_texteTranslations;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+    * Constructor
+    */
+    public function __construct($locales = array())
+    {
+        $this->textesjuridiques = new \Doctrine\Common\Collections\ArrayCollection();
+	$this->rowBills = new ArrayCollection();
+	$this->itemTranslations = new ArrayCollection();
+
+	foreach($locales as $locale)
+	 {
+		$itemTranslation = new ItemTranslation();
+		$itemTranslation->setLocale($locale);
+		$this->addItemTranslation($itemTranslation);
+	}
+    }
+
+    /**
+     * Add textesjuridique
+     *
+     * @param \Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique
+     *
+     * @return TypeTexte
+     */
+    public function addTextesjuridique(\Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique)
+    {
+        $this->textesjuridiques[] = $textesjuridique;
+        $textesjuridiques->setTypeTexte($this);
+        return $this;
+    }
+
+    /**
+     * Remove textesjuridique
+     *
+     * @param \Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique
+     */
+    public function removeTextesjuridique(\Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique)
+    {
+        $this->textesjuridiques->removeElement($textesjuridique);
+    }
+
+    /**
+     * Get textesjuridiques
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTextesjuridiques()
+    {
+        return $this->textesjuridiques;
+    }
+
+    
+
+    /**
+     * Add typeTexteTranslation
+     *
+     * @param \Culture\JuridiqueBundle\Entity\ArticleTranslation $typeTexteTranslation
+     *
+     * @return TypeTexte
+     */
+    public function addTypeTexteTranslation(\Culture\JuridiqueBundle\Entity\ArticleTranslation $typeTexteTranslation)
+    {
+        $this->type_texteTranslations[] = $typeTexteTranslation;
+
+        return $this;
+    }
+
+    /**
+     * Remove typeTexteTranslation
+     *
+     * @param \Culture\JuridiqueBundle\Entity\ArticleTranslation $typeTexteTranslation
+     */
+    public function removeTypeTexteTranslation(\Culture\JuridiqueBundle\Entity\ArticleTranslation $typeTexteTranslation)
+    {
+        $this->type_texteTranslations->removeElement($typeTexteTranslation);
+    }
+
+    /**
+     * Get typeTexteTranslations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTypeTexteTranslations()
+    {
+        return $this->type_texteTranslations;
+    }
+}

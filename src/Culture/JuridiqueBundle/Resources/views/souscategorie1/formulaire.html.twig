@@ -1,0 +1,58 @@
+
+{% set route_appelante = route_appelante|default('souscategorie1_new') %}
+{% if route_appelante=='sousCategorie1_new' %}  
+    <form action="{{ path(route_appelante, {'id': sousCategorie1.id} ) }}" method="post" {{form_enctype(form) }}>
+    {% else %}      
+        <form action="" method="post" {{form_enctype(form) }}>
+        {% endif %}
+        <p>
+            {# On affiche tous les messages flash dont le nom est « info » #}
+            {% for message in app.session.flashbag.get('info') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+
+        <div class="row">
+            {{ form_errors(form) }}
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                {{ form_errors(form.domaine) }}
+                <div class="form-group">
+
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Domaine Culturel">{{ 'Domaine Culturel'|trans }}:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        
+                       
+                        {{ form_widget(form.domaine, { 'attr': {'class': 'form-control','placeholder': 'Entrer Domaine Culturel'} }) }}
+                    </div>
+                </div>
+                <br><br>
+                {{ form_errors(form.sousCategorie1) }}
+                <div class="form-group">
+
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Sous Categorie1">{{ 'Sous Catégorie1'|trans }}:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {% set sous_categorie = 'Entrer Sous Categorie1'|trans %}
+                        {{ form_widget(form.sousCategorie1, { 'attr': {'class': 'form-control','placeholder':sous_categorie } }) }}
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        {{ form_rest(form) }}
+        {% if (route_appelante=='souscategorie1_new') or  (route_appelante=='souscategorie1_edit') %}
+            <div class="row" style="  margin-top: 40px;">
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary"  value="{{ 'Valider'|trans }}" />
+                    <input  type="reset" class="btn btn-default" value="{{ 'Réinitialiser'|trans }}" />
+                </div>
+            </div>
+        {% elseif route_appelante=='souscategorie1_delete' %}
+           <div class="row" style="  margin-top: 40px;">
+                <div class="modal-footer">
+                    <input type="submit" value="{{ 'Supprimer'|trans }}" class="btn btn-danger" />
+                </div>
+            </div>
+        {% endif %}
+
+    </form>

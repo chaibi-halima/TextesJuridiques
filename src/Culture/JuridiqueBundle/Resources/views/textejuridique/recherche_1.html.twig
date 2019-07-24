@@ -1,0 +1,57 @@
+{% block stylesheet %}
+    <link href="{{asset('bower_components/bootstrap/dist/css/bootstrap.css')}}" rel="stylesheet">
+{% endblock %} 
+
+    <form action="" method="post" {{form_enctype(form) }}>
+        <p>
+            {# On affiche tous les messages flash dont le nom est « info » #}
+            {% for message in app.session.flashbag.get('info') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+
+        <div class="row">
+            {{ form_errors(form) }}
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                {{ form_errors(form.typetexte) }}
+                <div class="form-group">
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Sujet">Nature Texte:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {{ form_widget(form.typetexte, { 'attr': {'class': 'form-control','placeholder': 'Entrer Nature'} }) }}
+                    </div>
+                </div>
+                <br><br>
+                {{ form_errors(form.annee) }}
+                <div class="form-group">
+                    <label class="control-label col-lg-4 col-md-6 col-xs-6" for="Sujet">Annee:</label>
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {{ form_widget(form.annee, { 'attr': {'class': 'form-control','placeholder': 'Entrer Annee'} }) }}
+                    </div>
+                </div>
+                <br><br>
+                {{ form_errors(form.numero) }}
+                <div class="form-group">
+                    <label class="control-label col-lg-4 col-md-6 col-xs-6" for="numero">Numero:</label>
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {{ form_widget(form.numero, { 'attr': {'class': 'form-control','placeholder': 'Entrer Numero'} }) }}
+                    </div>
+                </div>  
+                <br><br>
+                {{ form_errors(form.date) }}
+                <div class="form-group">
+                    <label class="control-label col-lg-4 col-md-6 col-xs-6" for="Date">Date:</label>
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {{ form_widget(form.date, { 'attr': {'class': 'date','placeholder': 'Entrer Date'} }) }}
+                    </div>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        {{ form_rest(form) }}
+            <div class="row" style="  margin-top: 40px;">
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" />
+                    <input  type="reset" class="btn btn-default" />
+                </div>
+            </div>
+        </form>

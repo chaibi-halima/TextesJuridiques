@@ -1,0 +1,56 @@
+{% extends '::layout.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }} | {{ 'Sous Catégorie2'|trans }}{% endblock %}
+{% block body %} 
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>{{ 'Liste des sous catégories 2'|trans }}</h2>
+                <div class="btn-group pull-right">                       
+                    <a class="btn btn-primary btn-xs" data-toggle="tooltip" 
+                       data-placement="top" title="" href="{{ path('souscategorie2_new') }}" data-original-title="Ajouter">
+                        <span class="glyphicon glyphicon-plus"></span> {{ 'Ajouter une nouvelle Sous Categorie2'|trans }}</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="table-responsive">
+                    <table id="datatable-buttons" class="table table-striped table-bordered bulk_action">
+                        <thead>
+                            <tr>
+                                <th>{{ 'Id'|trans }}</th>
+                                <th>{{ 'Sous Catégorie 2'|trans }}</th>
+                               
+                                <th>{{ 'Actions'|trans }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for souscategorie2 in sousCategorie2s %}
+                                <tr>
+                                    <td>{{ souscategorie2.id }}</td>
+                                    <td>{{ souscategorie2.souscategorie2 }}</td>
+                                    
+                                    <td>
+
+                                        <div class="text-center">
+                                            <a class="btn btn-primary btn-xs" data-toggle="tooltip" 
+                                               data-placement="top" title="" href="{{ path('souscategorie2_show', { 'id': souscategorie2.id }) }}" data-original-title="afficher">
+                                                <span class="glyphicon glyphicon-search"></span></a>
+                                            <a class="btn btn-danger btn-xs" data-toggle="tooltip" 
+                                               data-placement="top" title="" href="{{ path('souscategorie2_edit', { 'id': souscategorie2.id }) }}" data-original-title="modifier">
+                                                <span class="glyphicon glyphicon-edit"></span></a>
+                                            <a class="btn btn-danger btn-xs" data-toggle="tooltip" 
+                                               data-placement="top" title="" href="{{ path('souscategorie2_delete', { 'id': souscategorie2.id }) }}" data-original-title="supprimer">
+                                                <span class="glyphicon glyphicon-remove"></span></a>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

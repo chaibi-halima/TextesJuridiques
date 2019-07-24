@@ -1,0 +1,38 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class=" page-title text-left wow bounce"  data-wow-delay="1s">
+        <h5><b>{{ 'Liste des Cahiers des Charges'|trans }}</b></h5>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+
+            <tbody id="myTable">
+                {% for cahier in cahiers %}
+                    <tr class="odd wow fadeInUp" data-wow-delay="1s">
+
+                        <td  class="tbl-title"><h6><a href="{{ asset('../web/uploads/cahiercharge/' ~ cahier.brochure) }}" target="_blank">{{ cahier.titre |trans }}
+                                </a></h6></td>
+                        <td>
+                            <div class="pull-left"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div> 
+
+                        </td>
+                        <td>
+                            <a href="{{ asset('../web/uploads/service/' ~ cahier.brochure) }}"
+                               rel="new-window" class="link_pdf" target="_blank">{{ 'Télécharger en format PDF'|trans }}</a>
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>   
+    </div>
+    <div class="col-md-12 text-center">
+        <ul class="pagination pagination-lg pager" id="myPager"></ul>
+    </div>
+
+{% endblock %}

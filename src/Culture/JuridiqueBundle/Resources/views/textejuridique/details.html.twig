@@ -1,0 +1,85 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class="row page-title text-left wow bounce" data-wow-delay="1s" >
+        <h6><b><u>{{ (texteJuridique.sujet)|trans }}</u></b></h6>
+        <div class="row col-lg-12 col-md-12">
+            <div class="table-responsive" >
+
+                <div class="row col-lg-7 col-md-7">
+                    <h6  data-wow-delay="2s">
+                        <textarea rows="18" readonly class="form-control">
+                            {{ (texteJuridique.contenu)|trans }}
+                        </textarea> 
+                    </h6>
+                </div>
+                <div class="col-lg-5 col-md-5">
+                    <h6>
+                        <b><u>{{ 'Informations relatives au texte'|trans }}:</u></b>
+
+                        <table  class="table" >
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Type du texte'|trans }}:</b></td><td> {{ (texteJuridique.TypeTexte.TypeTexte)|trans }} </td></tr>
+                            {% if texteJuridique.numero != NULL %}<tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Numéro du texte'|trans }}:</b> </td><td> {{ (texteJuridique.numero)|trans }}</td></tr>{% endif %}
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Date du texte'|trans }}:</b></td><td>  {{ texteJuridique.date|date('d/m/Y') }}</td></tr>
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Domaine Culturel'|trans }}:</b></td><td> {{ (texteJuridique.Domaine.domaine)|trans }}</td></tr>
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Statut du texte'|trans }}:</b> </td><td>{{ (texteJuridique.StatutTexte.StatutTexte)|trans }}</td></tr>
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'N° JORT'|trans }}:</b></td><td>  {{ texteJuridique.jort }}</td></tr>
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Date du JORT'|trans }}:</b></td><td>  {% if texteJuridique.dateJort != NULL %}{{ texteJuridique.dateJort|date('d/m/Y')  }}{% endif %}</td></tr>
+                        </table>
+
+                    </h6>
+
+                    <h6>
+                        <table align='left'>
+                            <tr>
+                                <td>
+                                    <div class="pull-left"> 
+                                        <a href="{{ texteJuridique.brochure }}"
+                                           rel="new-window" class="link_pdf" target="_blank" 
+                                           onclick="enabledChange('{{ texteJuridique.id }}', '{{ path('textejuridique_download', {'id': texteJuridique.id}) }}', '{{ texteJuridique.download }}')">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td> &nbsp; </td>
+                                <td>
+                                    <div id='nbreDownload'> 
+                                        {% set nvdownload = (texteJuridique.download)%}
+                                        {{nvdownload}} 
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="pull-left"> 
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </div>
+                                </td>
+                                <td> &nbsp; </td>
+                                <td>
+                                    {{ texteJuridique.compteur}} 
+
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td> {{ facebookButton() }}&nbsp; </td>
+                                <td> {{ twitterButton() }}&nbsp; </td>
+                                <td> {{ googleplusButton() }}&nbsp; </td>
+                            </tr>
+                        </table>
+                    </h6>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

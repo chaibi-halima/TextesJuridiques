@@ -1,0 +1,91 @@
+<?php
+
+namespace Culture\JuridiqueBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+
+/**
+ * Domaine
+ *
+ * @ORM\Table(name="domaine_translation")
+ * @ORM\Entity(repositoryClass="Culture\JuridiqueBundle\Repository\DomaineTranslationRepository")
+ */
+class DomaineTranslation
+{
+    use ORMBehaviors\Translatable\Translation;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="domaine", type="string", length=255)
+     */
+    private $domaine;
+
+    /**
+     * Set domaine
+     *
+     * @param string $domaine
+     *
+     * @return Domaine
+     */
+    public function setDomaine($domaine)
+    {
+        $this->domaine = $domaine;
+
+        return $this;
+    }
+
+    /**
+     * Get domaine
+     *
+     * @return string
+     * 
+     */
+    public function getDomaine()
+    {
+        return $this->domaine;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->sousCategorie1s = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add sousCategorie1
+     *
+     * @param \Culture\JuridiqueBundle\Entity\SousCategorie1 $sousCategorie1
+     *
+     * @return Domaine
+     */
+    public function addSousCategorie1(\Culture\JuridiqueBundle\Entity\SousCategorie1 $sousCategorie1)
+    {
+        $this->sousCategorie1s[] = $sousCategorie1;
+
+        return $this;
+    }
+
+    /**
+     * Remove sousCategorie1
+     *
+     * @param \Culture\JuridiqueBundle\Entity\SousCategorie1 $sousCategorie1
+     */
+    public function removeSousCategorie1(\Culture\JuridiqueBundle\Entity\SousCategorie1 $sousCategorie1)
+    {
+        $this->sousCategorie1s->removeElement($sousCategorie1);
+    }
+
+    /**
+     * Get sousCategorie1s
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSousCategorie1s()
+    {
+        return $this->sousCategorie1s;
+    }
+}

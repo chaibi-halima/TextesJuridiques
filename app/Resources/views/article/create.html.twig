@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+
+    <div class="translations">
+        <ul class="nav nav-tabs">
+            {% for translation in form.postBlogTranslations %}
+                <li class="{{ loop.first ? 'active' : '' }}">
+                    <a href="#translation-{{ translation.vars.value.locale }}" role="tab" data-toggle="tab">
+                        {{ translation.vars.value.locale }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="tab-content">
+            {% for translation in form.articleTranslations %}
+                <div id="translation-{{ translation.vars.value.locale }}" class="tab-pane{{ loop.first ? ' active' : '' }}">
+                    {% for element in translation %}
+                        {{ form_row(element) }}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+    
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Articletranslations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Locale</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Content</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for articleTranslation in articleTranslations %}
+            <tr>
+                <td><a href="{{ path('articletranslation_show', { 'id': articleTranslation.id }) }}">{{ articleTranslation.id }}</a></td>
+                <td>{{ articleTranslation.locale }}</td>
+                <td>{{ articleTranslation.title }}</td>
+                <td>{{ articleTranslation.description }}</td>
+                <td>{{ articleTranslation.content }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('articletranslation_show', { 'id': articleTranslation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('articletranslation_edit', { 'id': articleTranslation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('articletranslation_new') }}">Create a new articleTranslation</a>
+        </li>
+    </ul>
+{% endblock %}

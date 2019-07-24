@@ -1,0 +1,91 @@
+
+
+{{ form_errors(form) }}
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="col-lg-3 col-md-3 col-sm-6">
+         {{ form_errors(form.typetexte) }}
+        <div class="form-group">
+            <label>Type du Texte</label>
+             {{ form_widget(form.typetexte, { 'attr': {'class': 'form-control','placeholder': 'Entrer Nature'} }) }}
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6">
+        {{ form_errors(form.annee) }}
+        <div class="form-group">
+            <label>Année du texte</label>
+             {{ form_widget(form.annee, { 'attr': {'class': 'form-control','placeholder': 'Entrer Annee'} }) }}
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6">
+        {{ form_errors(form.numero) }}
+        <div class="form-group">
+            <label>N° du texte</label>
+           {{ form_widget(form.numero, { 'attr': {'class': 'form-control','placeholder': 'Entrer Numero'} }) }}
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6">
+        {{ form_errors(form.date) }}
+        <div class="form-group">
+            <label>Date du texte</label>
+            {{ form_widget(form.date) }}
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="col-lg-3 col-md-3 col-sm-6">
+
+        <div class="form-group">
+            <label>Domaine culturel</label>
+              <select name="" id="" class="form-control">
+                <option selected>Domaine culturel</option>
+                <option>Patrimoine</option>
+                <option>Musique</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-6">
+        {{ form_errors(form.anneejort) }}
+        <div class="form-group">
+            <label>Année du JORT</label>
+             {{ form_widget(form.anneejort, { 'attr': {'class': 'form-control','placeholder': 'Entrer Annee JORT'} }) }}
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        {{ form_errors(form.jort) }}
+        <div class="form-group">
+            <label>N° du JORT</label>
+            {{ form_widget(form.jort, { 'attr': {'class': 'form-control','placeholder': 'Entrer N° JORT'} }) }}
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        {{ form_errors(form.datejort) }}
+        <div class="form-group">
+            <label>Date du JORT</label>
+           {{ form_widget(form.datejort) }}
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="form-group">
+
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="form-group">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="form-group">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="form-group" align="right">
+            <input type="submit"  class="btn btn-red" value="Rechercher" style="text-align: center;">
+        </div>
+    </div>
+</div>

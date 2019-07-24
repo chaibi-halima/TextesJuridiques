@@ -1,0 +1,14 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+{% endblock %}
+{% block fos_user_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    {% endblock fos_user_content %}

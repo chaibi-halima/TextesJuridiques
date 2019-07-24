@@ -1,0 +1,164 @@
+<?php
+
+namespace Culture\JuridiqueBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Translatable\Translatable;
+
+/**
+ * PhaseProjet
+ *
+ * @ORM\Table(name="phase_projet")
+ * @ORM\Entity(repositoryClass="Culture\JuridiqueBundle\Repository\PhaseProjetRepository")
+ * @Gedmo\TranslationEntity(class="Culture\JuridiqueBundle\Entity\Traduction\PhaseProjetTraduction")
+ */
+class PhaseProjet
+{
+    /**
+    * @ORM\OneToMany(targetEntity="Culture\JuridiqueBundle\Entity\ProjetLoi",mappedBy="phaseprojet")
+    */
+    private $textesjuridiques;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="phase", type="string", length=255)
+     * @Gedmo\Translatable
+     */
+    private $phase;
+    
+    
+    
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set phase
+     *
+     * @param string $phase
+     *
+     * @return PhaseProjet
+     */
+    public function setPhase($phase)
+    {
+        $this->phase = $phase;
+
+        return $this;
+    }
+
+    /**
+     * Get phase
+     *
+     * @return string
+     */
+    public function getPhase()
+    {
+        return $this->phase;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->textesjuridiques = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add textesjuridique
+     *
+     * @param \Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique
+     *
+     * @return PhaseProjet
+     */
+    public function addTextesjuridique(\Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique)
+    {
+        $this->textesjuridiques[] = $textesjuridique;
+
+        return $this;
+    }
+
+    /**
+     * Remove textesjuridique
+     *
+     * @param \Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique
+     */
+    public function removeTextesjuridique(\Culture\JuridiqueBundle\Entity\TexteJuridique $textesjuridique)
+    {
+        $this->textesjuridiques->removeElement($textesjuridique);
+    }
+
+    /**
+     * Get textesjuridiques
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTextesjuridiques()
+    {
+        return $this->textesjuridiques;
+    }
+
+    /**
+     * Set contenu
+     *
+     * @param string $contenu
+     *
+     * @return PhaseProjet
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    /**
+     * Get contenu
+     *
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * Set brochure
+     *
+     * @param string $brochure
+     *
+     * @return PhaseProjet
+     */
+    public function setBrochure($brochure)
+    {
+        $this->brochure = $brochure;
+
+        return $this;
+    }
+
+    /**
+     * Get brochure
+     *
+     * @return string
+     */
+    public function getBrochure()
+    {
+        return $this->brochure;
+    }
+}

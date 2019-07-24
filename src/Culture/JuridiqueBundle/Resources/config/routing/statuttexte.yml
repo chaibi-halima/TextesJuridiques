@@ -1,0 +1,24 @@
+statuttexte_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:StatutTexte:index" }
+    methods:  GET
+
+statuttexte_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:StatutTexte:show" }
+    methods:  GET
+
+statuttexte_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:StatutTexte:new" }
+    methods:  [GET, POST]
+
+statuttexte_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:StatutTexte:edit" }
+    methods:  [GET, POST]
+
+statuttexte_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:StatutTexte:delete" }
+    methods:  [GET, POST]

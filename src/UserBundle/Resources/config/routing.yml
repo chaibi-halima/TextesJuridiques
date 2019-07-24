@@ -1,0 +1,3 @@
+comment:
+    path:     /comment
+    defaults: { _controller: "CommentBundle:Default:index" }

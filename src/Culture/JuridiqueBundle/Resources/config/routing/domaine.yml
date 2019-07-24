@@ -1,0 +1,24 @@
+domaine_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:Domaine:index" }
+    methods:  GET
+
+domaine_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:Domaine:show" }
+    methods:  GET
+
+domaine_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:Domaine:new" }
+    methods:  [GET, POST]
+
+domaine_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:Domaine:edit" }
+    methods:  [GET, POST]
+
+domaine_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:Domaine:delete" }
+    methods:  [GET, POST]

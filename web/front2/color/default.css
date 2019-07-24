@@ -1,0 +1,121 @@
+/*
+#1 color = #b41c1b;
+#2 color = firebrick;
+*/
+
+a:hover,
+a:focus {
+    color: darkgoldenrod;
+}
+
+.circled {
+	background: #b41c1b;
+}
+
+.con1 > div, .con2 > div, .con3 > div { 
+	background-color: #b41c1b;
+}
+
+.scrollup:hover {
+	background: #b41c1b;
+}
+
+
+/* service */
+
+.service-icon span {
+	color: #b41c1b;
+}
+
+
+
+/* button */
+.btn-skin {
+  background-color: #b41c1b;
+  border-color: #b41c1b;
+  width: 230px;
+}
+
+
+/* top */
+.top-area {
+	background: #e0d6c7;
+}
+
+/* menu */
+
+.navbar-custom ul.nav ul.dropdown-menu li a:hover {
+	color: firebrick;
+}
+.navbar-custom.top-nav-collapse .nav li a:hover,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active a,.navbar-custom.top-nav-collapse .nav li.active a  {
+    color: firebrick;
+}
+
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+    background-color: #b41c1b;
+}
+
+
+.bg-skin {
+	background: #b41c1b;
+}
+
+.highlight-color {
+	background-color: #b41c1b;
+}
+.color {
+	color: #b41c1b;
+}
+
+/* pricing box  */
+.pricing-content.featured h2,.pricing-content.featured .price-bottom {
+	background-color:firebrick;
+}
+.pricing-content.featured h3 {
+	background:#b41c1b;
+}
+
+
+
+/* team */
+.cbp-l-grid-team-name {
+    color: firebrick;
+}
+
+.cbp-l-filters-button .cbp-filter-counter {
+	background-color: #b41c1b;
+}
+
+.cbp-l-filters-alignLeft .cbp-filter-item-active {
+    /* @editable properties */
+    background-color: #b41c1b;
+    border:1px solid #b41c1b;
+}
+
+.cbp-l-filters-dropdownWrap {
+    background: #b41c1b;
+}
+.cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
+    /* @editable properties */
+    background-color: #b41c1b;
+    border-color: #b41c1b;
+}
+.cbp-l-caption-buttonLeft,
+.cbp-l-caption-buttonRight {
+    /* @editable properties */
+    background-color: #b41c1b;
+}
+
+.cbp-l-caption-buttonLeft:hover,
+.cbp-l-caption-buttonRight:hover {
+    /* @editable properties */
+    background-color: firebrick;
+}
+
+.form-control:focus {
+  border-color: firebrick;
+}

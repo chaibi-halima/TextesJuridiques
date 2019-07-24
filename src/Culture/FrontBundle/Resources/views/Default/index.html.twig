@@ -1,0 +1,32 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class="page-title text-left wow bounce"  data-wow-delay="1s">
+        <h5><b>{{ 'Actualités juridiques'|trans }}</b></h5>
+    </div>
+
+
+    <div class="job-posts table-responsive">
+        <table class="table" >
+                <thead>
+                        <tr>
+                            <th>{{ 'Texte Juridique'|trans }}</th>
+                            <th>{{ 'Domaine Culturel'|trans }}</th>
+                        </tr>
+                    </thead>
+            {% for texteJuridique in texteJuridiques|slice(0, 5) %}
+            <tr>
+                    <td  class="tbl-title" width="80%"><h6><a href="{{ path('textejuridique_details', { 'id': texteJuridique.id }) }}">{{ texteJuridique.sujet }}</a></h6></td>
+                    <td ><h6>{{ texteJuridique.domaine.domaine }}</h6></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="more-jobs text-right">
+        <a href="{{ path('culture_front_liste') }}">{{ 'Voir toutes les actualités'|trans }}&nbsp;<i class="fa fa-refresh"></i></a>
+    </div>
+ 
+{% endblock %}
+

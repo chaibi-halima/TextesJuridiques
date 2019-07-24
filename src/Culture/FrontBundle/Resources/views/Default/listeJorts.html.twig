@@ -1,0 +1,38 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block body %} 
+ 
+    <div class=" page-title text-left wow bounce" >
+        <h5><b>{{ 'Liste des JORT'|trans }}</b></h5>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="example" class="display" style="width:100%">
+                                    <thead>
+                                            <tr>
+                                                <th>{{ 'JORT'|trans }}</th>
+                                                <th>{{ 'Date du JORT'|trans }}</th>
+                                                <th>{{ 'Consulter les textes de ce JORT'|trans }}</th>
+                                            </tr>
+                                        </thead>
+                                <tbody id="myTable">
+                                    {% for texteJuridique in texteJuridiques %}
+                                         {% set nvdownload = (texteJuridique.download - 1)%}
+                                         <tr>
+
+                                             <td  class="tbl-title"><h6>{{ 'JORT'|trans }} {{ 'N°'|trans }} {{ texteJuridique.jort }}</h6></td>
+                                             <td> <h6>{% if texteJuridique.dateJort %} {{ texteJuridique.dateJort|date('Y-m-d') }}{% endif %}</h6></td>       
+                                             <td  class="tbl-title"><h6><a href="{{ path('jort_details', { 'id': texteJuridique.jort , 'dateJort':texteJuridique.dateJort|date('Y-m-d') }) }}">{{ 'Consulter les textes de ce JORT'|trans }}</a></h6></td>
+                        
+                        
+                                        </tr>
+
+                                    {% endfor %}
+                                </tbody>
+                               
+                            </table>   
+                        </div>
+                        
+
+                        {% endblock %}

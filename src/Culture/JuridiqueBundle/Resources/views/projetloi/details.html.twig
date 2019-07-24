@@ -1,0 +1,35 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class="row page-title text-left wow bounce" data-wow-delay="1s" >
+        <h5><b><u>{{ (projetLoi.sujet)|trans }}</u></b></h5>
+        <div class="row col-lg-12 col-md-12">
+            <div class="table-responsive" >
+
+                <div class="row col-lg-7 col-md-7">
+                    <h6  data-wow-delay="2s">
+                        <textarea rows="18" readonly class="form-control">
+                            {{ (projetLoi.contenu)|trans }}
+                        </textarea> 
+                    </h6>
+                </div>
+                <div class="col-lg-5 col-md-5">
+                    <h6>
+                        <b><u>{{ 'Informations relatives au texte'|trans }}:</u></b>
+                        <table  class="table" >
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Date du texte'|trans }}:</b></td><td>   {{ projetLoi.date|date('d/m/Y') }}</td></tr>
+                            <tr class="odd wow fadeInUp" data-wow-delay="2s"><td><b>{{ 'Phase'|trans }}:</b></td><td>   {{ projetLoi.phaseprojet.phase }}</td></tr>
+                        </table>
+                    </h6>
+                    <div class="telecharger"> <div class="pull-left"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></div> <a href="{{ asset('../web/uploads/projet/' ~ projetLoi.brochure) }}" 
+                                                                                                                                      rel="new-window" class="link_pdf" target="_blank">&nbsp; {{ 'Télécharger en format PDF'|trans }}</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

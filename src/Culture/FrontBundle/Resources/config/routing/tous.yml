@@ -1,0 +1,64 @@
+culture_front_liste:
+    path:     /liste_actualites
+    defaults: { _controller: CultureFrontBundle:Default:liste }
+   
+culture_front_result_search:
+    path:     /result_search
+    defaults: { _controller: CultureFrontBundle:Default:result_search }
+    
+textejuridique_details:
+    path:     /{id}/details
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:details" }
+    methods:  [GET, POST]
+
+culture_front_liste_constitutions:
+    path:     /liste_constitutions
+    defaults: { _controller: CultureFrontBundle:Default:listeConstitutions }
+    
+constitution_details:
+    path:     constitution/{id}/details
+    defaults: { _controller: "CultureJuridiqueBundle:Constitution:details" }
+    methods:  [GET, POST]
+    
+culture_front_liste_jorts:
+    path:     /liste_jorts
+    defaults: { _controller: CultureFrontBundle:Default:listeJorts }
+    
+jort_details:
+    path:     jort/{id}/{dateJort}/details
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:detailsJort" }
+    methods:  [GET, POST]
+    
+culture_front_liste_nominations:
+    path:     /liste_nominations
+    defaults: { _controller: CultureFrontBundle:Default:listeNominations }
+    
+culture_front_liste_conventions:
+    path:     /liste_conventions
+    defaults: { _controller: CultureFrontBundle:Default:listeConventions }
+    
+culture_front_liste_projets:
+    path:     /liste_projets
+    defaults: { _controller: CultureFrontBundle:Default:listeProjets }
+    
+projet_details:
+    path:     projet/{id}/details
+    defaults: { _controller: "CultureJuridiqueBundle:ProjetLoi:details" }
+    methods:  [GET, POST]
+    
+culture_front_liste_cahiers:
+    path:     /liste_cahiers
+    defaults: { _controller: CultureFrontBundle:Default:listeCahiersCharges }
+    
+culture_front_liste_services:
+    path:     /liste_services
+    defaults: { _controller: CultureFrontBundle:Default:listeServices }
+    
+culture_front_liste_circulaires:
+    path:     /liste_circulaires
+    defaults: { _controller: CultureFrontBundle:Default:listeCirculaires }
+
+textejuridique_download:
+    path:     /{id}/download
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:download" }
+    methods:  [GET, POST]

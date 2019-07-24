@@ -1,0 +1,46 @@
+
+{% set route_appelante = route_appelante|default('direction_new') %}
+{% if route_appelante=='direction_new' %}  
+    <form action="{{ path(route_appelante, {'id': direction.id} ) }}" method="post" {{form_enctype(form) }}>
+    {% else %}      
+        <form action="" method="post" {{form_enctype(form) }}>
+        {% endif %}
+        <p>
+            {# On affiche tous les messages flash dont le nom est « info » #}
+            {% for message in app.session.flashbag.get('info') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+
+        <div class="row">
+            {{ form_errors(form) }}
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                {{ form_errors(form.direction) }}
+                <div class="form-group">
+
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Sujet">{{ 'Direction'|trans }}:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {% set direction = 'Entrer Direction'|trans %}
+                        {{ form_widget(form.direction, { 'attr': {'class': 'form-control','placeholder': direction} }) }}
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        {{ form_rest(form) }}
+        {% if (route_appelante=='direction_new') or  (route_appelante=='direction_edit') %}
+            <div class="row" style="  margin-top: 40px;">
+               <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary"  value="{{ 'Valider'|trans }}" />
+                    <input  type="reset" class="btn btn-default" value="{{ 'Réinitialiser'|trans }}" />
+                </div>
+            </div>
+        {% elseif route_appelante=='direction_delete' %}
+            <div class="row" style="  margin-top: 40px;">
+                 <div class="modal-footer">
+                    <input type="submit" value="{{ 'Supprimer'|trans }}" class="btn btn-danger" />
+                </div>
+            </div>
+        {% endif %}
+
+    </form>

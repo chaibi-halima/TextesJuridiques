@@ -1,0 +1,36 @@
+textejuridique_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:index" }
+    methods:  [GET, POST]
+
+textejuridique_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:show" }
+    methods:  GET
+
+textejuridique_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:new" }
+    methods:  [GET, POST]
+
+textejuridique_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:edit" }
+    methods:  [GET, POST]
+
+textejuridique_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:delete" }
+    methods:  [GET, POST]
+    
+textejuridique_search:
+    path:     /search
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:search" }
+    methods:  [GET, POST]
+    
+textejuridique_download:
+    path:     /{id}/download
+    defaults: { _controller: "CultureJuridiqueBundle:TexteJuridique:download" }
+    methods:  [GET, POST]
+
+

@@ -1,0 +1,78 @@
+<?php
+
+namespace Culture\FrontBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Article
+ *
+ * @ORM\Table(name="article")
+ * @ORM\Entity(repositoryClass="Culture\FrontBundle\Repository\ArticleRepository")
+ */
+class Article
+{
+    /**
+    * @ORM\OneToMany(targetEntity="Culture\FrontBundle\Entity\ArticleTranslation",mappedBy="article")
+    */
+    private $articles;
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add article
+     *
+     * @param \Culture\FrontBundle\Entity\ArticleTranslation $article
+     *
+     * @return Article
+     */
+    public function addArticle(\Culture\FrontBundle\Entity\ArticleTranslation $article)
+    {
+        $this->articles[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \Culture\FrontBundle\Entity\ArticleTranslation $article
+     */
+    public function removeArticle(\Culture\FrontBundle\Entity\ArticleTranslation $article)
+    {
+        $this->articles->removeElement($article);
+    }
+
+    /**
+     * Get articles
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArticles()
+    {
+        return $this->articles;
+    }
+}

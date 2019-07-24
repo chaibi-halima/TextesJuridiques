@@ -1,0 +1,67 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class=" page-title text-left wow bounce"  data-wow-delay="1s">
+        <h5><b>{{ 'Liste des Textes Juridiques liés au JORT n°'|trans}} {{ jort.Numero }} {{'daté le'|trans}} {{ jort.date|date('d/m/Y')  }}</b></h5>
+    </div>
+
+
+    <div class="job-posts table-responsive">
+        <table class="table" >
+            {% for texteJuridique in texteJuridiques %}
+                {% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+                {% block title %}{{ parent() }}{% endblock %}
+                {% block body %} 
+                    <!-- Section: works -->
+
+                    <div class="row page-title text-left wow bounce"  data-wow-delay="1s">
+                        <h5><b>{{ 'Liste des Textes Juridiques liés au JORT n°'|trans}} {{ jort.Numero }} {{'daté le'|trans}} {{ jort.date|date('d/m/Y')  }}</b></h5>
+                    </div>
+
+
+                    <div class="job-posts table-responsive">
+                        <table class="table" >
+                            {% for texteJuridique in texteJuridiques %}
+                                <tr class="odd wow fadeInUp" data-wow-delay="1s">
+
+                                    <td  class="tbl-title"><h6> <a href="{{ path('textejuridique_details', { 'id': texteJuridique.id }) }}">{{ texteJuridique.sujet }}</a></h6></td>
+                                    <td><h6>
+                                            <div class="telecharger">  <a href="{{ asset('../web/uploads/brochures/' ~ texteJuridique.brochure) }}" 
+                                                                          rel="new-window" class="link_pdf" target="_blank">
+                                                    <div class="pull-left">
+                                                        <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                                    </div>
+                                                </a>
+
+
+                                            </div>
+
+                                        </h6></td>
+                                    <td>
+                                        <h6>
+
+                                            <div class="pull-left"> 
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+
+                                            </div>
+                                        </h6>
+                                    </td>
+                                    <!-- <td class="tbl-apply"><a href="#">Voir plus</a></td> -->
+
+
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+
+
+                {% endblock %}
+
+            {% endfor %}
+        </table>
+    </div>
+
+
+{% endblock %}

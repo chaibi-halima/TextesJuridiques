@@ -1,0 +1,252 @@
+Accueil: Accueil
+Constitution: Constitution
+'La constitution': 'La constitution'
+JORT: JORT
+'Journal officiel': 'Journal officiel'
+'Textes Juridiques': 'Textes Juridiques'
+'Lois et règlements': 'Lois et règlements'
+Nominations: Nominations
+'Les nominations': 'Les nominations'
+Conventions: Conventions
+'Les conventions': 'Les conventions'
+'traités internationaux': 'traités internationaux'
+'Conventions et traités internationaux': 'Conventions'
+'Projets des lois': 'Projets des lois'
+Services: Services
+'Cahiers des charges': 'Cahiers des charges'
+'Services administratifs': 'Services administratifs'
+'Actualités juridiques': 'Actualités juridiques'
+'Tous les textes': 'Tous les textes'
+'Voir toutes les actualités': 'Voir toutes les actualités'
+'Type du Texte': 'Type du Texte'
+'Type du texte': 'Type du texte'
+'Année du texte': 'Année du texte'
+'N° du texte': 'N° du texte'
+'Numéro du texte': 'Numéro du texte'
+'Date du texte': 'Date du texte'
+'Domaine culturel': 'Domaine culturel'
+'Domaine Culturel': 'Domaine Culturel'
+'Année du JORT': 'Année du JORT'
+'N° du JORT': 'N° du JORT'
+'N° JORT': 'N° du JORT'
+'Date du JORT': 'Date du JORT'
+'Choisir Type Texte': 'Choisir Type Texte'
+'Entrer Numero': 'Entrer Numero'
+'Choisir Domaine Culturel': 'Choisir Domaine Culturel'
+'Choisir JORT': 'Choisir JORT'
+'Entrer N° JORT': 'Entrer N° JORT'
+Rechercher: Rechercher
+'Ministère des Affaires Culturelles': 'Ministère des Affaires Culturelles'
+'Rue 02 Mars 1934 Kasba,1002 Tunis': 'Rue 02 Mars 1934 Kasba,1002 Tunis'
+'Suivez nous': 'Suivez nous'
+Newsletter: Newsletter
+'Recevez l''info en direct grâce à notre newsletter': 'Recevez l''info en direct grâce à notre newsletter'
+'Addresse Email': 'Addresse Email'
+Envoyer: Envoyer
+Copyright: Copyright
+'Minsitère des Affaires Culturelles.': 'Minsitère des Affaires Culturelles.'
+'Tous droits rèservès.': 'Tous droits rèservès.'
+'Liste des textes juridiques': 'Liste des textes juridiques'
+'Liste des Textes': 'Liste des textes'
+'Constitutions de la République Tunisienne': 'Constitutions de la République Tunisienne'
+'Constitution de la République Tunisienne': 'Constitution de la République Tunisienne'
+'Liste des JORTs de la République Tunisienne': 'Liste des JORTs de la République Tunisienne'
+'JORT de la République Tunisienne': 'JORT de la République Tunisienne'
+'Liste des nominations': 'Liste des nominations'
+'Liste des conventions': 'Liste des conventions'
+'Liste des projets de loi': 'Liste des projets de loi'
+'projets de loi': 'projets de loi'
+'Projets de loi': 'Projets de loi'
+Titre: Titre
+Date: Date
+'Phase du Projet': 'Phase du Projet'
+'Désolé il n''y a, pour le moment, aucune annonce correspondant à votre recherche': 'Désolé il n''y a, pour le moment, aucune annonce correspondant à votre recherche'
+'Statut du texte': 'Statut du texte'
+'Télécharger en format PDF': 'Télécharger en format PDF1'
+'Informations relatives au texte': 'Informations relatives au texte'
+Phase: Phase
+'Liste des Textes Juridiques liés au JORT n°': 'Liste des Textes Juridiques liés au JORT n°'
+'daté le': 'daté le'
+'Accueil Administration "Culture Juridique"': 'Accueil Administration "Culture Juridique"'
+'Culture Juridique': 'Culture Juridique'
+'Fichiers de base': 'Fichiers de base'
+'Projets de textes juridiques': 'Projets de textes juridiques'
+'Le Ministère': 'Le Ministère'
+'Les directions du Ministère': 'Les directions du Ministère'
+Organigramme: Organigramme
+'Attribution du Ministère': 'Attribution du Ministère'
+'Les institutions sous-tutelle': 'Les institutions sous-tutelle'
+Bienvenue: Bienvenue
+Admin: Admin
+Profil: Profil
+Aide: Aide
+Déconnexion: Déconnexion
+Paramètres: Paramètres
+'Direction de l''Organisation,des Méthodes et de l''Informatique': 'Direction de l''Organisation,des Méthodes et de l''Informatique'
+Sous-catégories1: Sous-catégories1
+Sous-catégories2: Sous-catégories2
+'Liste des natures de textes': 'Liste des natures de textes'
+'Ajouter une nouvelle nature': 'Ajouter une nouvelle nature'
+Id: Id
+Identifiant: Identifiant
+identifiant: identifiant
+Nature: Nature
+Actions: Actions
+'Nature des Textes': 'Nature des Textes'
+'Ajout une nouvelle nature': 'Ajout une nouvelle nature'
+'Liste des Nature des Textes': 'Liste des Nature des Textes'
+'Nature Texte': 'Nature Texte'
+'Entrer Nature': 'Entrer Nature'
+Valider: Valider
+Réinitialiser: Réinitialiser
+Supprimer: Supprimer
+'Modifier une nature de texte': 'Modifier une nature de texte'
+'Supprimer une nature de texte': 'Supprimer une nature de texte'
+'Afficher une nature de texte': 'Afficher une nature de texte'
+'Liste des statuts de textes': 'Liste des statuts de textes'
+'Ajouter un nouveau statut': 'Ajouter un nouveau statut'
+Statut: Statut
+'Statut des Textes': 'Statut des Textes'
+'Ajout un nouveau statut': 'Ajout un nouveau statut'
+'Liste des Statuts des Textes': 'Liste des Statuts des Textes'
+'Statut Texte': 'Statut Texte'
+'Entrer Statut': 'Entrer Statut'
+'Modifier un statut de texte': 'Modifier un statut de texte'
+'Afficher un statut de texte': 'Afficher un statut de texte'
+'Supprimer un statut de texte': 'Supprimer un statut de texte'
+'Accueil Administration': 'Accueil Administration'
+'Supprimer un domaine culturel': 'Supprimer un domaine culturel'
+'Liste des Domaines Culturels': 'Liste des Domaines Culturels'
+'Modifier un domaine culturel': 'Modifier un domaine culturel'
+'Liste des domaines': 'Liste des domaines'
+Domaine: Domaine
+'Ajouter un nouveau domaine': 'Ajouter un nouveau domaine'
+'Ajout un nouveau domaine': 'Ajout un nouveau domaine'
+'Liste des domaines Culturels': 'Liste des domaines Culturels'
+'Afficher un domaine culturel': 'Afficher un domaine culturel'
+'Sous Catégorie1': 'Sous Catégorie1'
+'Supprimer une sous categorie1': 'Supprimer une sous categorie1'
+'Liste des sous categorie1': 'Liste des sous categorie1'
+'Entrer Sous Categorie1': 'Entrer Sous Categorie1'
+'Modifier une sous categorie1': 'Modifier une sous categorie1'
+'Liste des sous catégories 1': 'Liste des sous catégories 1'
+'Ajouter une nouvelle Sous Categorie1': 'Ajouter une nouvelle Sous Categorie1'
+'Sous Catégorie 1': 'Sous Catégorie 1'
+'Ajout une nouvelle Sous Categorie1': 'Ajout une nouvelle Sous Categorie1'
+'Afficher une sous categorie1': 'Afficher une sous categorie1'
+'Sous Catégorie2': 'Sous Catégorie2'
+'Supprimer une sous categorie2': 'Supprimer une sous categorie2'
+'Liste des sous categorie2': 'Liste des sous categorie2'
+'Entrer Sous Categorie2': 'Entrer Sous Categorie2'
+'Modifier une sous categorie2': 'Modifier une sous categorie2'
+'Liste des sous catégories 2': 'Liste des sous catégories 2'
+'Ajouter une nouvelle Sous Categorie2': 'Ajouter une nouvelle Sous Categorie2'
+'Sous Catégorie 2': 'Sous Catégorie 2'
+'Ajout une nouvelle Sous Categorie2': 'Ajout une nouvelle Sous Categorie2'
+'Afficher une sous categorie2': 'Afficher une sous categorie2'
+'Phase Projet': 'Phase Projet'
+'Phase projet': 'Phase projet'
+'phase projet': 'phase projet'
+'phase de projet': 'phase de projet'
+'Supprimer une phase de projet': 'Supprimer une phase de projet'
+'Liste des phases des projets': 'Liste des phases des projets'
+'Entrer Phase': 'Entrer Phase'
+'Modifier une phase de projet': 'Modifier une phase de projet'
+'Liste des phases de projet': 'Liste des phases de projet'
+'Liste des Phases Projets': 'Liste des Phases Projets'
+'Ajouter une nouvelle phase de projet': 'Ajouter une nouvelle phase de projet'
+'Phase de Projet': 'Phase de Projet'
+'Ajout une nouvelle phase de projet': 'Ajout une nouvelle phase de projet'
+'Afficher une phase de projet': 'Afficher une phase de projet'
+constitution: constitution
+'Supprimer une Constitution': 'Supprimer une Constitution'
+'Liste des Constitutions': 'Liste des Constitutions'
+'Entrer Constitution': 'Entrer Constitution'
+'Modifier une Constitution': 'Modifier une Constitution'
+'Liste des constitutions': 'Liste des constitutions'
+'Ajouter une nouvelle Constitution': 'Ajouter une nouvelle Constitution'
+'Ajout une nouvelle Constitution': 'Ajout une nouvelle Constitution'
+'Afficher une Constitution': 'Afficher une Constitution'
+'Fichier PDF': 'Fichier PDF'
+'Contenu du Texte': 'Contenu du Texte'
+jort: jort
+'Supprimer un JORT': 'Supprimer un JORT'
+'Liste des JORT': 'Liste des JORT'
+'Entrer JORT': 'Entrer JORT'
+'Modifier un JORT': 'Modifier un JORT'
+'Ajouter un nouveau JORT': 'Ajouter un nouveau JORT'
+'Ajout un nouveau JORT': 'Ajout un nouveau JORT'
+'Afficher un JORT': 'Afficher un JORT'
+Numero: Numero
+'Texte Juridique': 'Texte Juridique'
+'Supprimer un Texte Juridique': 'Supprimer un Texte Juridique'
+'Liste des Textes Juridiques': 'Liste des Textes Juridiques'
+'Entrer Texte Juridique': 'Entrer Texte Juridique'
+'Modifier un Texte Juridique': 'Modifier un Texte Juridique'
+'Liste des Texte Juridique': 'Liste des Texte Juridique'
+'Ajouter un nouveau Texte Juridique': 'Ajouter un nouveau Texte Juridique'
+'Ajout un nouveau texte juridique': 'Ajout un nouveau texte juridique'
+'Afficher un texte juridique': 'Afficher un texte juridique'
+Sujet: Sujet
+Nomination: Nomination
+'Entrer Sujet': 'Entrer Sujet'
+'Projet de Loi': 'Projet de Loi'
+'Supprimer un projet de loi': 'Supprimer un projet de loi'
+'Entrer projet de loi': 'Entrer projet de loi'
+'Modifier un projet de loi': 'Modifier un projet de loi'
+'Liste des Projets de Loi': 'Liste des Projets de Loi'
+'Ajouter un nouveau projet de loi': 'Ajouter un nouveau projet de loi'
+'Ajout un nouveau Projet de loi': 'Ajout un nouveau Projet de loi'
+'Ajouter un nouveau Projet de loi': 'Ajouter un nouveau Projet de loi'
+'Afficher un projet de loi': 'Afficher un projet de loi'
+'Sujet Projet': 'Sujet Projet'
+'Entrer Contenu': 'Entrer Contenu'
+'Cahier des Charges': 'Cahier des Charges'
+'Supprimer un Cahier des Charges': 'Supprimer un Cahier des Charges'
+'Liste des Cahiers des Charges': 'Liste des Cahiers des Charges'
+'Entrer Cahier des Charges': 'Entrer Cahier des Charges'
+'Modifier un Cahier des Charges': 'Modifier un Cahier des Charges'
+'Liste des cahiers des Charges': 'Liste des cahiers des Charges'
+'Ajouter un nouveau Cahier des Charges': 'Ajouter un nouveau Cahier des Charges'
+'Ajout un nouveau Cahier des Charges': 'Ajout un nouveau Cahier des Charges'
+'Afficher un Cahier des Charges': 'Afficher un Cahier des Charges'
+'Sujet Cahier des Charges': 'Sujet Cahier des Charges'
+'Entrer Titre': 'Entrer Titre'
+'Service Administratif': 'Service Administratif'
+'Supprimer un Service Administratif': 'Supprimer un Service Administratif'
+'Liste des Services Administratifs': 'Liste des Services Administratifs'
+'Entrer Service Administratif': 'Entrer Service Administratif'
+'Modifier un Service Administratif': 'Modifier un Service Administratif'
+'Liste des service administratif': 'Liste des service administratif'
+'Ajouter un nouveau Service Administratif': 'Ajouter un nouveau Service Administratif'
+'Ajout un nouveau Service Administratif': 'Ajout un nouveau Service Administratif'
+'Afficher un Service Administratif': 'Afficher un Service Administratif'
+'Sujet Service Administratif': 'Sujet Service Administratif'
+Direction: Direction
+'Supprimer une direction': 'Supprimer une direction'
+'Liste des Directions': 'Liste des Directions'
+'Entrer Direction': 'Entrer Direction'
+'Modifier une direction': 'Modifier une direction'
+'Liste des directions': 'Liste des directions'
+'Ajouter une nouvelle direction': 'Ajouter une nouvelle direction'
+'Ajout une nouvelle direction': 'Ajout une nouvelle direction'
+'Ajouter Ajout une nouvelle direction': 'Ajouter Ajout une nouvelle direction'
+'Afficher une direction': 'Afficher une direction'
+'Sujet direction': 'Sujet direction'
+N°: N°
+du: du
+'Service administratif': 'Service administratif'
+Télécharger: Télécharger
+
+Circulaires: Circulaires
+Liste des Circulaires: Liste des Circulaires
+
+République Tunisienne | Ministère des Affaires Culturelles : République Tunisienne | Ministère des Affaires Culturelles
+Consulter les textes de ce JORT : Consulter les textes de ce JORT 
+
+Changer mot de passe : Changer mot de passe 
+Changer profil : Changer profil 
+Register : Registre
+Login : Se connecter
+username : Username
+password : Password

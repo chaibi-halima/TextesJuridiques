@@ -1,0 +1,18 @@
+
+    
+culture_front:
+    resource: "@CultureFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+culture_back:
+    path: /{_locale}/admin
+    defaults: { _controller: JuridiqueBundle:Default:index }
+    requirements:
+        _locale: ar|fr|en # les locales disponibles, séparées par des pipes « | » 
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    
+
+    
+

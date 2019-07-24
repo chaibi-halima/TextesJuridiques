@@ -1,0 +1,14 @@
+{% extends '::layout.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }} | {{ 'Accueil Administration'|trans }}{% endblock %}
+{% block body %} 
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>{{ 'Accueil Administration'|trans }} : {{ 'Culture Juridique'|trans }}</h2>
+                
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{# src/Culture/JuridiqueBundle/Resources/views/listeTextes.html.twig #}
+
+{% extends '::layout.' ~ app.request.locale ~ '.html.twig' %}
+
+{% block title %}
+
+{{ 'Liste des Textes'|trans }} - {{parent() }}
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{{parent() }}
+
+<link rel="stylesheet" href="{{ asset('bundles/CultureJuridiqueBundle/css/styleIndex.css') }}" type="text/css" />
+
+{% endblock %}
+
+{% block body %}
+
+<div class="well">
+
+<h3>{{ 'Liste des Textes'|trans }}</h3>
+
+<ul>
+
+{% for texte in liste_textes %}
+
+<li><a href="{{ path('textejuridique_show', { 'id': texte.id }) }}">{{ texte.numero }}</a></li>
+
+{% else %}
+
+<p>{{ "Désolé il n\'y a, pour le moment, aucune annonce correspondant à votre recherche"|trans }}.</p>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endblock %}

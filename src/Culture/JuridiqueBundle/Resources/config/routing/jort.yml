@@ -1,0 +1,24 @@
+jort_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:jort:index" }
+    methods:  GET
+
+jort_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:jort:show" }
+    methods:  GET
+
+jort_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:jort:new" }
+    methods:  [GET, POST]
+
+jort_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:jort:edit" }
+    methods:  [GET, POST]
+
+jort_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:jort:delete" }
+    methods:  [GET, POST]

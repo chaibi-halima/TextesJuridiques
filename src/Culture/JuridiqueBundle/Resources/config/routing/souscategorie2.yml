@@ -1,0 +1,24 @@
+souscategorie2_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:SousCategorie2:index" }
+    methods:  GET
+
+souscategorie2_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:SousCategorie2:show" }
+    methods:  GET
+
+souscategorie2_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:SousCategorie2:new" }
+    methods:  [GET, POST]
+
+souscategorie2_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:SousCategorie2:edit" }
+    methods:  [GET, POST]
+
+souscategorie2_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:SousCategorie2:delete" }
+    methods:  [GET, POST]

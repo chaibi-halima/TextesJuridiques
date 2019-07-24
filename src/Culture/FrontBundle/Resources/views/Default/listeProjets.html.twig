@@ -1,0 +1,38 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class=" page-title text-left wow bounce"  data-wow-delay="1s">
+        <h5><b>{{ 'Liste des projets de loi'|trans }}</b></h5>
+    </div>
+
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+
+            <tbody id="myTable">
+                <tr class="odd wow fadeInUp" data-wow-delay="1s">
+
+                <td  class="tbl-title" width="60%"><h6><b>{{ 'Titre'|trans }}</b></h6></td>
+                <td  width="10%"><h6><b>{{ 'Date'|trans }}</b></h6></td>
+                <td  width="30%"><h6><b>{{ 'Phase du Projet'|trans }}</b></h6></td>
+            </tr>
+                {% for projet in projets %}
+                <tr class="odd wow fadeInUp" data-wow-delay="1s">
+
+                    <td  class="tbl-title" width="60%"><h6> <a href="{{ path('projet_details', { 'id': projet.id }) }}">{{ projet.sujet }}</a></h6></td>
+                    <td  width="10%"><h6>{% if projet.date %}{{ projet.date|date('d/m/Y') }}{% endif %}</h6></td>
+                    <td  width="30%"><h6>{{ projet.phaseprojet.phase }}</h6></td>
+                    <!-- <td class="tbl-apply"><a href="#">Voir plus</a></td> -->
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>   
+    </div>
+    <div class="col-md-12 text-center">
+        <ul class="pagination pagination-lg pager" id="myPager"></ul>
+    </div>
+
+{% endblock %}

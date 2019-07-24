@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+{% block direction %}
+    <HTML DIR="RTL">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+         <title>{% block title %}{{ 'Culture Juridique'|trans }}{% endblock %}</title>
+    </HTML>
+        {% block stylesheet %}
+            
+            <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+            <!-- Font Awesome -->
+            <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+            <!-- NProgress -->
+            <link href="{{ asset('vendors/nprogress/nprogress.css') }}" rel="stylesheet">
+            <!-- iCheck -->
+            <link href="{{ asset('vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
+            <!-- bootstrap-progressbar -->
+
+            <!-- JQVMap -->
+
+
+            <!-- Custom Theme Style -->
+            <link href="{{ asset('build/css/custom-ar.min.css') }}" rel="stylesheet">
+        {% endblock %}
+        {% endblock %}
+        {% block body %} 		
+        {% endblock %}

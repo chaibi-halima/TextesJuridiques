@@ -1,0 +1,17 @@
+services:
+    culture_juridique.locale_listener:
+        class: Culture\JuridiqueBundle\EventListener\LocaleListener
+        arguments: [ar]
+        tags:
+            - { name: kernel.event_subscriber }
+            
+    culture_juridique.birthday_type_extension:
+        class: Culture\JuridiqueBundle\Form\Extension\BirthdayTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\BirthdayType }
+            
+imports:
+    - { resource: services/twig.yml }
+    
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/JuridiqueBundle/Controller/TexteJuridiqueController.php</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/JuridiqueBundle/Entity/TexteJuridique.php</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/app/Resources/views/layout_front.html.twig</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/FrontBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/FrontBundle/Resources/views/Default/index.html.twig</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/JuridiqueBundle/Resources/views/textejuridique/recherche.html.twig</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/JuridiqueBundle/Resources/views/textejuridique/details.html.twig</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/JuridiqueBundle/Repository/TexteJuridiqueRepository.php</file>
+            <file>file:/C:/wamp64/www/CultureJuridique/src/Culture/FrontBundle/Resources/views/Default/listeActualites.html.twig</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,28 @@
+{% extends '::layout.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }} | {{ 'Textes Juridiques'|trans }}{% endblock %}
+{% block PageHeading %}
+    {% set route_appelante = route_appelante|default('textejuridique_index') %}
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>{{ 'Supprimer un Texte Juridique'|trans }}</h2>
+                <div class="btn-group pull-right">                       
+                    <a class="btn btn-primary btn-xs" data-toggle="tooltip" 
+                       data-placement="top" title="" href="{{ path('textejuridique_index') }}" data-original-title="Liste">
+                        <span class="glyphicon glyphicon-list"></span> {{ 'Liste des Textes Juridiques'|trans }}</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        {% endblock %}
+
+        {% block body -%}
+            <div class="x_content">
+                {% include "CultureJuridiqueBundle:textejuridique:formulaire.html.twig" with {'route_appelante': 'textejuridique_delete'} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    {{parent()}}
+{% endblock %}

@@ -1,0 +1,71 @@
+culture_juridique_textejuridique:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/textejuridique.yml"
+    prefix:   /textejuridique
+
+culture_juridique_typetexte:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/typetexte.yml"
+    prefix:   /typetexte
+
+culture_juridique_statuttexte:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/statuttexte.yml"
+    prefix:   /statuttexte
+    
+culture_juridique_domaine:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/domaine.yml"
+    prefix:   /domaine
+
+culture_juridique_phaseprojet:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/phaseprojet.yml"
+    prefix:   /phaseprojet
+    
+culture_juridique_projetloi:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/projetloi.yml"
+    prefix:   /projetloi
+    
+culture_juridique_souscategorie1:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/souscategorie1.yml"
+    prefix:   /souscategorie1
+    
+culture_juridique_souscategorie2:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/souscategorie2.yml"
+    prefix:   /souscategorie2
+    
+culture_juridique_jort:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/jort.yml"
+    prefix:   /jort
+    
+culture_juridique_cahiercharge:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/cahiercharge.yml"
+    prefix:   /cahiercharge
+    
+culture_juridique_direction:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/direction.yml"
+    prefix:   /direction
+    
+culture_juridique_service:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/service.yml"
+    prefix:   /service
+    
+culture_juridique_constitution:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/constitution.yml"
+    prefix:   /constitution
+    
+culture_juridique_post:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/post.yml"
+    prefix:   /post
+    
+    
+culture_juridique_myentity:
+    resource: "@CultureJuridiqueBundle/Resources/config/routing/myentity.yml"
+    prefix:   /myentity    
+    
+   
+    
+
+
+    
+#culture_juridique_translation:
+#    path: /traduction/{name}
+#    defaults: { _controller: CultureJuridiqueBundle:Advert:translation }
+
+

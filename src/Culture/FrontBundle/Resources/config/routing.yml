@@ -1,0 +1,31 @@
+culture_front_homepage:
+    path: /{_locale}
+    defaults: { _controller: CultureFrontBundle:Default:index, _locale:ar }
+    requirements:
+        _locale: ar|fr|en # les locales disponibles, séparées par des pipes « | »
+
+culture_front_tous:
+    prefix:   /{_locale}
+    resource: "@CultureFrontBundle/Resources/config/routing/tous.yml"
+    requirements:
+        _locale: ar|fr|en # les locales disponibles, séparées par des pipes « | » 
+        
+culture_juridique_homepage:
+    path: /{_locale}/admin
+    defaults: { _controller: CultureJuridiqueBundle:Default:index, _locale:ar }
+    requirements:
+        _locale: ar|fr|en # les locales disponibles, séparées par des pipes « | »
+        
+culture_juridique_tous:
+    prefix: /{_locale}/admin
+    resource: "@CultureJuridiqueBundle/Resources/config/routing.yml"
+    requirements:
+        _locale: ar|fr|en # les locales disponibles, séparées par des pipes « | » 
+
+        
+        
+    
+    
+        
+
+    

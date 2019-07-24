@@ -1,0 +1,24 @@
+cahiercharge_index:
+    path:     /
+    defaults: { _controller: "CultureJuridiqueBundle:CahierCharge:index" }
+    methods:  GET
+
+cahiercharge_show:
+    path:     /{id}/show
+    defaults: { _controller: "CultureJuridiqueBundle:CahierCharge:show" }
+    methods:  GET
+
+cahiercharge_new:
+    path:     /new
+    defaults: { _controller: "CultureJuridiqueBundle:CahierCharge:new" }
+    methods:  [GET, POST]
+
+cahiercharge_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CultureJuridiqueBundle:CahierCharge:edit" }
+    methods:  [GET, POST]
+
+cahiercharge_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CultureJuridiqueBundle:CahierCharge:delete" }
+    methods:  [GET, POST]

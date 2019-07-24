@@ -1,0 +1,36 @@
+{% extends '::layout_front.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block body %} 
+    <!-- Section: works -->
+
+    <div class=" page-title text-left wow bounce"  data-wow-delay="1s">
+        <h5><b>{{ 'Liste des Textes Juridiques liés au JORT n°'|trans}} {{ jort }} {{'daté le'|trans}} {{ dateJort|date("d-m-Y")}}</b></h5>
+    </div>
+
+
+    <div class="table-responsive">
+            <table class="table table-hover" id="example" class="display" style="width:100%">
+                <thead>
+                        <tr>
+                                <th>{{ 'Texte Juridique'|trans }}</th>
+                                <th>{{ 'Date'|trans }}</th>
+                                <th>{{ 'Domaine Culturel'|trans }}</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                            {% for texteJuridique in texteJuridiques %}
+                                
+                                <tr>
+                                    <td  class="tbl-title" width="60%"><h6><a href="{{ path('textejuridique_details', { 'id': texteJuridique.id }) }}">{{ texteJuridique.sujet }}</a></h6></td>
+                                    <td  width="20%"><h6>{{ texteJuridique.date|date("Y-m-d")}}</h6></td>
+                                    <td width="20%" ><h6>{{ texteJuridique.domaine.domaine }}</h6></td>
+                                   
+                                </tr>
+
+                            {% endfor %}
+                        </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

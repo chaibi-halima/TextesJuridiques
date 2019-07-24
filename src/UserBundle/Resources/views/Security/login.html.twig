@@ -1,0 +1,59 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% block stylesheets %}
+    <link href="{{asset('css/fosuser/css/style.css')}}" rel="stylesheet">
+{% endblock %}
+{% block fos_user_content %}
+
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <div class="box">
+            <h3>
+                {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            </h3>
+        </div>
+    {% else %}
+        <div class="box">
+            <h1>{{'Login'|trans}}</h1>
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+             <div class="col-md-12">
+              <div class="col-md-3">
+                    {{'username'|trans}}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                
+                
+                </div>
+                <div class="col-md-3">
+                        <label id="icon" for="username"><i class="fa fa-user"></i></label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required"  onfocus="this.value = '';"  onblur="if (this.value == '') {
+                            this.value = '{{'security.login.username'|trans}}';
+                        }" />
+             </div>
+             <div class="col-md-3">
+                    {{'password'|trans}}
+                 <label id="icon" for="password"><i class="fa fa-shield"></i></label>
+            </div>
+            <div class="col-md-3">  
+                <input type="password" id="password" name="_password" required="required" onfocus="this.value = '';"  onblur="if (this.value == '') {
+                            this.value = '{{'security.login.password'|trans}}';
+                        }" />
+                    </div>
+                </div>
+                <div class="options"
+
+                     <label  class="checkbox">
+                        <input type="checkbox"  id="remember_me" name="_remember_me" checked>
+                        <span class="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</span>
+                    </label>
+
+                    <input type="submit"  class="button" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+                </div>
+             
+                {% if error %}
+                    <div class="error_login">{{ error|trans({}, 'FOSUserBundle') }}</div>
+                {% endif %}
+            </form>
+        </div>
+    {% endif %}
+{% endblock fos_user_content %}

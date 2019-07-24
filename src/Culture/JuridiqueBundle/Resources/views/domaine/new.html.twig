@@ -1,0 +1,28 @@
+{% extends '::layout.' ~ app.request.locale ~ '.html.twig' %}
+{% block title %}{{ parent() }} | {{ 'Domaine Culturel'|trans }}{% endblock %}
+{% block PageHeading %}
+    {% set route_appelante = route_appelante|default('domaine_index') %}
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>{{ 'Ajout un nouveau domaine'|trans }}</h2>
+                <div class="btn-group pull-right">                       
+                    <a class="btn btn-primary btn-xs" data-toggle="tooltip" 
+                       data-placement="top" title="" href="{{ path('domaine_index') }}" data-original-title="Liste">
+                        <span class="glyphicon glyphicon-list"></span> {{ 'Liste des domaines Culturels'|trans }}</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        {% endblock %}
+
+        {% block body -%}
+            <div class="x_content">
+                {% include "CultureJuridiqueBundle:domaine:formulaire.html.twig" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    {{parent()}}
+{% endblock %}

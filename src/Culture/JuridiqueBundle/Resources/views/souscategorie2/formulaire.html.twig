@@ -1,0 +1,90 @@
+
+{% set route_appelante = route_appelante|default('souscategorie2_new') %}
+{% if route_appelante=='sousCategorie2_new' %}  
+    <form action="{{ path(route_appelante, {'id': sousCategorie2.id} ) }}" method="post" {{form_enctype(form) }}>
+    {% else %}      
+        <form action="" method="post" {{form_enctype(form) }}>
+        {% endif %}
+        <p>
+            {# On affiche tous les messages flash dont le nom est « info » #}
+            {% for message in app.session.flashbag.get('info') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+
+        <div class="row">
+            {{ form_errors(form) }}
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                {{ form_errors(form.domaine) }}
+                <div class="form-group">
+
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Domaine Culturel">{{ 'Domaine Culturel'|trans }}:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12" id="meetup_domaine">
+                        {{ form_widget(form.domaine, { 'attr': {'class': 'form-control','placeholder': 'Choisir Domaine Culturel'} }) }}
+                    </div>
+                </div>
+                <br><br>
+                {{ form_errors(form.souscategorie1) }}
+                <div class="form-group">
+
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Sous Categorie1">{{ 'Sous Categorie1'|trans }}:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12" id="meetup_souscategorie1">
+                        {{ form_widget(form.souscategorie1, { 'attr': {'class': 'form-control','placeholder': 'Choisir Sous Categorie1'} }) }}
+                    </div>
+                </div>
+                <br><br>
+                {{ form_errors(form.sousCategorie2) }}
+                <div class="form-group">
+
+                    <label class="control-label col-lg-4  col-md-6 col-xs-6" for="Sous Categorie2">{{ 'Sous Categorie2'|trans }}:</label>
+
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                        {{ form_widget(form.sousCategorie2, { 'attr': {'class': 'form-control','placeholder': 'Entrer Sous Categorie2'} }) }}
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        {{ form_rest(form) }}
+        {% if (route_appelante=='souscategorie2_new') or  (route_appelante=='souscategorie2_edit') %}
+           <div class="row" style="  margin-top: 40px;">
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary"  value="{{ 'Valider'|trans }}" />
+                    <input  type="reset" class="btn btn-default" value="{{ 'Réinitialiser'|trans }}" />
+                </div>
+            </div>
+        {% elseif route_appelante=='souscategorie2_delete' %}
+             <div class="row" style="  margin-top: 40px;">
+                <div class="modal-footer">
+                    <input type="submit" value="{{ 'Supprimer'|trans }}" class="btn btn-danger" />
+                </div>
+            </div>
+        {% endif %}
+
+    </form>
+<script>
+var $domaine = $('#meetup_domaine');
+// When sport gets selected ...
+$domaine.change(function() {
+  // ... retrieve the corresponding form.
+  var $form = $(this).closest('form');
+  // Simulate form data, but only include the selected sport value.
+  var data = {};
+  data[$sport.attr('name')] = $sport.val();
+  // Submit data via AJAX to the form's action path.
+  $.ajax({
+    url : $form.attr('action'),
+    type: $form.attr('method'),
+    data : data,
+    success: function(html) {
+      // Replace current position field ...
+      $('#meetup_souscategorie1').replaceWith(
+        // ... with the returned one from the AJAX response.
+        $(html).find('#meetup_souscategorie1')
+      );
+      // Position field now displays the appropriate positions.
+    }
+  });
+});
+</script>
