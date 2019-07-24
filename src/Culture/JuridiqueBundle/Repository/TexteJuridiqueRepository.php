@@ -76,16 +76,18 @@ class TexteJuridiqueRepository extends \Doctrine\ORM\EntityRepository {
         $query = $this->createQueryBuilder('a');
         $query->andWhere("a.jort != 'NULL' ")
         ->orderBy('a.date', 'DESC')
-        ->groupBy('a.jort');
+        ->groupBy('a.jort,a.date_jort');
 
  
        return $query->getQuery()->getResult();;
     }
-    public function findAllJort($jort) {
+    public function findAllJort($jort,$dateJort) {
 
         $query = $this->createQueryBuilder('a');
         $query->andWhere('a.jort = :jort_id')
+              ->andWhere('a.date_jort = :date_jort')
               ->setParameter('jort_id', $jort)
+              ->setParameter('date_jort', $dateJort)
               ->orderBy('a.date', 'DESC');
         
          

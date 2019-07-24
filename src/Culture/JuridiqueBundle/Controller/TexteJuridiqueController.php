@@ -309,7 +309,7 @@ class TexteJuridiqueController extends Controller {
 
 
         $em = $this->getDoctrine()->getManager();
-        $texteJuridiques = $em->getRepository('CultureJuridiqueBundle:TexteJuridique')->findAllJort($numJort);
+        $texteJuridiques = $em->getRepository('CultureJuridiqueBundle:TexteJuridique')->findAllJort($numJort,$dateJort);
 
         return $this->render('CultureFrontBundle:Default:listeActualitesJort.html.twig', array
                     ('form' => $form->createView(),
