@@ -30,10 +30,6 @@ culture_juridique_souscategorie2:
     resource: "@CultureJuridiqueBundle/Resources/config/routing/souscategorie2.yml"
     prefix:   /souscategorie2
     
-culture_juridique_jort:
-    resource: "@CultureJuridiqueBundle/Resources/config/routing/jort.yml"
-    prefix:   /jort
-    
 culture_juridique_cahiercharge:
     resource: "@CultureJuridiqueBundle/Resources/config/routing/cahiercharge.yml"
     prefix:   /cahiercharge
