@@ -5,6 +5,7 @@
         <link href="{{asset('css/font-awesome-4.5.0/css/font-awesome.min.css')}}" rel="stylesheet">
         {% block stylesheets %}
         {% endblock %}
+        <title>{% block title %}{{ 'Login'|trans }}{% endblock %}</title>
     </head>
     <body>
         {% if app.request.hasPreviousSession %}

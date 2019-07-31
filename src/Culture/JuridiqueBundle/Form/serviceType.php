@@ -17,7 +17,7 @@ class serviceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('titre')
-                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','required' => false,'data_class' => null))
+                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','data_class' => null))
                 ->add('direction', 'entity', array('class' => 'CultureJuridiqueBundle:Direction',
                       'label' => 'Direction', 'property'=>'direction', ));
     }

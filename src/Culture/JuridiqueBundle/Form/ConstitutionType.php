@@ -17,7 +17,7 @@ class ConstitutionType extends AbstractType
         $builder
                 ->add('titre','text', array('required'  => false))
                 ->add('date', 'birthday', array('required'  => false))
-                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','required' => false,'data_class' => null))
+                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)', 'data_class' => null))
                 ->add('statuttexte', 'entity', array('class' => 'CultureJuridiqueBundle:StatutTexte',
                       'label' => 'Statut de Texte', 'property'=>'statutTexte', ))
                 ->add('contenu', 'textarea', array('attr' => array('cols' => 20, 'rows' => 8) ,'required'  => false));

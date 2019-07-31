@@ -41,7 +41,7 @@ class CahierChargeController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $cahierCharge->getBrochure();
             // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $fileName = $file->getClientOriginalName(); 
             // Move the file to the directory where brochures are stored
             $file->move(
                     $this->getParameter('brochures_cahiercharge_directory'), $fileName
@@ -55,6 +55,7 @@ class CahierChargeController extends Controller
 
             return $this->redirectToRoute('cahiercharge_index');
         }
+
 
         return $this->render('CultureJuridiqueBundle:cahiercharge:new.html.twig', array(
             'cahierCharge' => $cahierCharge,
@@ -85,16 +86,24 @@ class CahierChargeController extends Controller
      */
     public function editAction(Request $request, CahierCharge $cahierCharge)
     {
+        $file=$cahierCharge->getBrochure();
         $cahierCharge->setBrochure(
                 new File($this->getParameter('brochures_cahiercharge_directory') . '/' . $cahierCharge->getBrochure()));
         $editForm = $this->createForm('Culture\JuridiqueBundle\Form\CahierChargeType', $cahierCharge);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            if($cahierCharge->getBrochure()=="")
+            {
+                $cahierCharge->setBrochure($file);
+            }
+
+            else 
+            {
             $file = $cahierCharge->getBrochure();
 
             // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $fileName = $file->getClientOriginalName(); 
 
             // Move the file to the directory where brochures are stored
             $file->move(
@@ -104,10 +113,12 @@ class CahierChargeController extends Controller
             // Update the 'brochure' property to store the PDF file name
             // instead of its contents
             $cahierCharge->setBrochure($fileName);
+        }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('cahiercharge_index');
         }
+
 
         return $this->render('CultureJuridiqueBundle:cahiercharge:edit.html.twig', array(
                     'cahierCharge' => $cahierCharge,

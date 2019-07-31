@@ -68,7 +68,7 @@
                     <div class="form-group">
                         <label class="control-label col-lg-4 col-md-6 col-xs-6" for="Brochure">{{ 'Fichier PDF'|trans }}: </label>
                         <div class="col-lg-3 col-md-3 col-xs-12">
-                            <a href="{{ asset('' ~ texteJuridique.brochure) }}">Télécharger (PDF)</a>
+                            <a href="{{ asset('../web/uploads/brochures/' ~ texteJuridique.brochure) }}">Télécharger (PDF)</a>
                         </div>
                         <div class="col-lg-3 col-md-3 col-xs-12">
                             {{ form_widget(form.brochure) }}

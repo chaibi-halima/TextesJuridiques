@@ -36,7 +36,7 @@
                             <tr>
                                 <td>
                                     <div class="pull-left"> 
-                                        <a href="{{ texteJuridique.brochure }}"
+                                            <a href="{{ asset('../web/uploads/brochures/' ~ texteJuridique.brochure) }}"
                                            rel="new-window" class="link_pdf" target="_blank" 
                                            onclick="enabledChange('{{ texteJuridique.id }}', '{{ path('textejuridique_download', {'id': texteJuridique.id}) }}', '{{ texteJuridique.download }}')">
                                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>

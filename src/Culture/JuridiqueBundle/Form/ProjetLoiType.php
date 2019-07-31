@@ -23,7 +23,7 @@ class ProjetLoiType extends AbstractType
                 ->add('phaseprojet', 'entity', array('class' => 'CultureJuridiqueBundle:PhaseProjet',
                       'label' => 'Phase de Projet', 'property'=>'phase', ))
                 ->add('contenu', 'textarea', array('attr' => array('cols' => 20, 'rows' => 8), 'required' => false))
-                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)', 'required' => false, 'data_class' => null));
+                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','data_class' => null));
     }
     
     /**

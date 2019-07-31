@@ -140,7 +140,7 @@ class TexteJuridiqueController extends Controller {
             new File($this->getParameter('brochures_directory') . '/' . $texteJuridique->getBrochure()));
         
         /*$texteJuridique->setBrochure($file);*/
-                
+
         $editForm = $this->createForm('Culture\JuridiqueBundle\Form\TexteJuridiqueType', $texteJuridique);
         
         $editForm->handleRequest($request);
@@ -148,9 +148,11 @@ class TexteJuridiqueController extends Controller {
        
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-
+ 
+         
             if($texteJuridique->getBrochure()=="")
             {
+              
                 $texteJuridique->setBrochure($file);
             }
 
@@ -164,7 +166,7 @@ class TexteJuridiqueController extends Controller {
                 $file->move(
                         $this->getParameter('brochures_directory'), $fileName
                 );
-    
+ 
                 // Update the 'brochure' property to store the PDF file name
                 // instead of its contents
                 $texteJuridique->setBrochure($fileName);
