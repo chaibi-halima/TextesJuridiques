@@ -69,6 +69,7 @@ class TexteJuridique implements Translatable {
      * @var string
      *
      * @ORM\Column(name="brochure", type="string", length=255)
+     * @Gedmo\Translatable
      */
     private $brochure;
 
@@ -130,6 +131,7 @@ class TexteJuridique implements Translatable {
      * @var string
      *
      * @ORM\Column(name="lien", type="string", length=255, nullable=true)
+     * @Gedmo\Translatable
      */
     private $lien;
 

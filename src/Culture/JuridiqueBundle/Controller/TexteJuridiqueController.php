@@ -135,9 +135,13 @@ class TexteJuridiqueController extends Controller {
      */
     public function editAction(Request $request, TexteJuridique $texteJuridique) {
 
-        $file=$texteJuridique->getBrochure();
-        $texteJuridique->setBrochure(
+        $file=null;
+        if($texteJuridique->getBrochure()<>"")
+        {
+            $file=$texteJuridique->getBrochure();
+            $texteJuridique->setBrochure(
             new File($this->getParameter('brochures_directory') . '/' . $texteJuridique->getBrochure()));
+        }
         
         /*$texteJuridique->setBrochure($file);*/
 
@@ -152,13 +156,11 @@ class TexteJuridiqueController extends Controller {
          
             if($texteJuridique->getBrochure()=="")
             {
-              
                 $texteJuridique->setBrochure($file);
             }
 
             else 
             {
-                
                 $file = $texteJuridique->getBrochure();
                 // Generate a unique name for the file before saving it
                 $fileName = $file->getClientOriginalName(); 

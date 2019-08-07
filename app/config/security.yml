@@ -34,6 +34,6 @@ security:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/%languages%/, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/%languages%/admin, role: ROLE_USER }
-        - { path: ^/%languages%/admin/, role: ROLE_USER }
+        - { path: ^/%locale%/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/%locale%/admin, role: ROLE_USER }
+        - { path: ^/%locale%/admin/, role: ROLE_USER }

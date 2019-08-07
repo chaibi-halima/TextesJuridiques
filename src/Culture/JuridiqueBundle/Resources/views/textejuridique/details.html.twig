@@ -36,11 +36,19 @@
                             <tr>
                                 <td>
                                     <div class="pull-left"> 
+                                        {% if ((texteJuridique.brochure)!=NULL)  %}
                                             <a href="{{ asset('../web/uploads/brochures/' ~ texteJuridique.brochure) }}"
                                            rel="new-window" class="link_pdf" target="_blank" 
                                            onclick="enabledChange('{{ texteJuridique.id }}', '{{ path('textejuridique_download', {'id': texteJuridique.id}) }}', '{{ texteJuridique.download }}')">
                                             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                                         </a>
+                                        {% else %}
+                                        <a href="{{ texteJuridique.lien }}"
+                                           rel="new-window" class="link_pdf" target="_blank" 
+                                           onclick="enabledChange('{{ texteJuridique.id }}', '{{ path('textejuridique_download', {'id': texteJuridique.id}) }}', '{{ texteJuridique.download }}')">
+                                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                        </a>
+                                        {% endif %}
                                     </div>
                                 </td>
                                 <td> &nbsp; </td>

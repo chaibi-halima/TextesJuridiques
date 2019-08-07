@@ -15,7 +15,7 @@ class CahierChargeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('titre')
-                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','data_class' => null));
+                ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','required' => false,'data_class' => null));
     }
     
     /**

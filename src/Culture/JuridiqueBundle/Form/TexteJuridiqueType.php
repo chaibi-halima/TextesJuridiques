@@ -32,7 +32,7 @@ class TexteJuridiqueType extends AbstractType {
             
     
         ->add('sujet')
-        ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','required' => true, 'data_class' => null))
+        ->add('brochure', FileType::class, array('label' => 'Brochure (PDF file)','required' => false,'data_class' => null))
         ->add('domaine', 'entity', array('class' => 'CultureJuridiqueBundle:Domaine',
         'label' => 'Domaine Culturel', 'property' => 'domaine', ))
         ->add('contenu', 'textarea', array('attr' => array('cols' => 20, 'rows' => 5) ))
